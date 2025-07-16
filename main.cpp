@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+#include <string>
 // int main() {
 //     int n = 6;
 //     int i,j;
@@ -183,16 +184,78 @@ using namespace std;
 
 
 
-class Demo {
-public:
-    Demo() {
-        cout<<"Constructor called"<<endl;
-    }
+// class Demo {
+// public:
+//     Demo() {
+//         cout<<"Constructor called"<<endl;
+//     }
+//
+// };
+//
+// int main() {
+//     Demo obj;
+//
+//     return 0;
+// }
+//
 
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+
+struct Employee {
+    int id;
+    string name;
+    string designation;
+    float salary;
+    float da;
+    float hra;
+    float gross;
 };
 
+
+void inputEmployee(Employee &emp) {
+    cout << "Enter Employee ID: ";
+    cin >> emp.id;
+    cin.ignore();
+
+    cout << "Enter Name: ";
+    getline(cin, emp.name);
+
+    cout << "Enter Designation: ";
+    getline(cin, emp.designation);
+
+    cout << "Enter Basic Salary: ";
+    cin >> emp.salary;
+
+    cout << "Enter DA: ";
+    cin >> emp.da;
+
+    cout << "Enter HRA: ";
+    cin >> emp.hra;
+
+
+    emp.gross = emp.salary + emp.da + emp.hra;
+}
+
+
+void displayEmployee(const Employee &emp) {
+    cout << "ID: " << emp.id << endl;
+    cout << "Name: " << emp.name << endl;
+    cout << "Designation: " << emp.designation << endl;
+    cout << "Basic Salary: " << emp.salary << endl;
+    cout << "DA: " << emp.da << endl;
+    cout << "HRA: " << emp.hra << endl;
+    cout << "Gross Salary: " << emp.gross << endl;
+}
+
 int main() {
-    Demo obj;
+    Employee emp;
+
+    inputEmployee(emp);
+    displayEmployee(emp);
 
     return 0;
 }
