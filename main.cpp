@@ -152,24 +152,41 @@ using namespace std;
 //     return 0;
 // }
 
+//
+//
+// namespace info {
+//     string name ="C++";
+// }
+//
+// int main() {
+//     using namespace info;
+//     cout<<name<<endl;
+//     return 0;
+//
+//
 
-namespace A {
-    int value = 10;
-
-}
-namespace B {
-    int value = 20;
-}
-
+class Outer {
+public:
+    class Inner {
+    public:
+        void show(){
+        cout<<"Inner class";
+        }
+    };
+};
 
 int main() {
-    cout<<A::value<<endl;
-    cout<<B::value<<endl;
+    Outer::Inner obj;
+    obj.show();
     return 0;
 }
 
 
-    // TIP See CLion help at <a
+
+
+
+
+// TIP See CLion help at <a
 // href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>.
 //  Also, you can try interactive lessons for CLion by selecting
 //  'Help | Learn IDE Features' from the main menu.
