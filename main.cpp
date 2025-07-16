@@ -185,13 +185,14 @@ using namespace std;
 
 class Demo {
 public:
-    demp() {
+    Demo() {
         cout<<"Constructor called"<<endl;
     }
 
 };
 int main() {
     Demo obj;
+
     return 0;
 }
 
