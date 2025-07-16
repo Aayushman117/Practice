@@ -164,27 +164,36 @@ using namespace std;
 //     return 0;
 //
 //
+//
+// class Outer {
+// public:
+//     class Inner {
+//     public:
+//         void show(){
+//         cout<<"Inner class";
+//         }
+//     };
+// };
+//
+// int main() {
+//     Outer::Inner obj;
+//     obj.show();
+//     return 0;
+// }
 
-class Outer {
+
+
+class Demo {
 public:
-    class Inner {
-    public:
-        void show(){
-        cout<<"Inner class";
-        }
-    };
-};
+    demp() {
+        cout<<"Constructor called"<<endl;
+    }
 
+};
 int main() {
-    Outer::Inner obj;
-    obj.show();
+    Demo obj;
     return 0;
 }
-
-
-
-
-
 
 // TIP See CLion help at <a
 // href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>.
