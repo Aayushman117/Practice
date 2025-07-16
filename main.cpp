@@ -154,11 +154,11 @@ using namespace std;
 
 
 namespace A {
-    int value =10;
+    int value = 10;
 
 }
 namespace B {
-    int value =20;
+    int value = 20;
 }
 
 
