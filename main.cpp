@@ -204,61 +204,128 @@ using namespace std;
 // #include <string>
 // using namespace std;
 
+//
+// struct Employee {
+//     int id;
+//     string name;
+//     string designation;
+//     float salary;
+//     float da;
+//     float hra;
+//     float gross;
+// };
+//
+//
+// void inputEmployee(Employee &emp) {
+//     cout << "Enter Employee ID: ";
+//     cin >> emp.id;
+//     cin.ignore();
+//
+//     cout << "Enter Name: ";
+//     getline(cin, emp.name);
+//
+//     cout << "Enter Designation: ";
+//     getline(cin, emp.designation);
+//
+//     cout << "Enter Basic Salary: ";
+//     cin >> emp.salary;
+//
+//     cout << "Enter DA: ";
+//     cin >> emp.da;
+//
+//     cout << "Enter HRA: ";
+//     cin >> emp.hra;
+//
+//
+//     emp.gross = emp.salary + emp.da + emp.hra;
+// }
+//
+//
+// void displayEmployee(const Employee &emp) {
+//     cout << "ID\t   " << "Name  \t  " << "Designation  \t  " <<"Basic Salary  \t " <<"DA  \t  " <<"HRA  \t  "<<"Gross Salary \t   "<< endl;
+//     cout<<emp.id<<" \t  "<<emp.name<<"\t   "<<emp.designation<<"\t   "<<emp.salary<<"\t   "<<emp.da<<"\t   "<<emp.hra<<"\t   "<<emp.gross<<"\t   "<<endl;
+//
+// }
+//
+// int main() {
+//     Employee emp;
+//
+//     inputEmployee(emp);
+//     displayEmployee(emp);
+//
+//     return 0;
+// }
 
-struct Employee {
-    int id;
-    string name;
-    string designation;
-    float salary;
-    float da;
-    float hra;
-    float gross;
+
+
+
+// int main() {
+//     int len,breadth;
+//     cout<<"Enter length and breath respective: ";
+//     cin>>len>>breadth;
+//     cout<<"Area: "<<len*breadth<<endl;
+//     cout<<"Perimeter: "<<2*(len+breadth);
+// }
+
+
+//inheritance
+
+// class Animal {
+// public:
+//     void sound() {
+//         cout<<"Animal Makes sound.\n";
+//     }
+// };
+// class Dog: public Animal {
+// public:
+//     void bark() {
+//         cout<<"Dog barks.\n";
+//     }
+// };
+// int main() {
+//     Dog coco;
+//     coco.bark();
+//     coco.sound();
+// }
+
+
+
+
+class person {
+public:
+    void display() {
+        cout<<"Im a person\n";
+    }
 };
-
-
-void inputEmployee(Employee &emp) {
-    cout << "Enter Employee ID: ";
-    cin >> emp.id;
-    cin.ignore();
-
-    cout << "Enter Name: ";
-    getline(cin, emp.name);
-
-    cout << "Enter Designation: ";
-    getline(cin, emp.designation);
-
-    cout << "Enter Basic Salary: ";
-    cin >> emp.salary;
-
-    cout << "Enter DA: ";
-    cin >> emp.da;
-
-    cout << "Enter HRA: ";
-    cin >> emp.hra;
-
-
-    emp.gross = emp.salary + emp.da + emp.hra;
-}
-
-
-void displayEmployee(const Employee &emp) {
-    cout << "ID: " << emp.id << endl;
-    cout << "Name: " << emp.name << endl;
-    cout << "Designation: " << emp.designation << endl;
-    cout << "Basic Salary: " << emp.salary << endl;
-    cout << "DA: " << emp.da << endl;
-    cout << "HRA: " << emp.hra << endl;
-    cout << "Gross Salary: " << emp.gross << endl;
-}
-
+class student: public person {
+public:
+    void show() {
+        cout<<"Im a Student\n";
+    }
+};
 int main() {
-    Employee emp;
-
-    inputEmployee(emp);
-    displayEmployee(emp);
-
-    return 0;
+    student coco;
+    coco.display();
+    coco.show();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // TIP See CLion help at <a
 // href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>.
